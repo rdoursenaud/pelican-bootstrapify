@@ -1,17 +1,17 @@
-bootstrapify
-===================================
+Pelican Materialize Plugin
+==========================
 
-This [pelican](https://github.com/getpelican/pelican) plugin modifies article and page html to use bootstrap's default classes. This is especially handy if you want to write tables in markdown, since the `attr_list` extension does not play nice with `tables`.
+This [Pelican](https://github.com/getpelican/pelican) plugin modifies article and page HTML to use [Material Design Lite (MDL) classes](https://getmdl.io) where applicable.
 
-#Requirements
+## Requirements
 *   Beautifulsoup4 - install via `pip install beautifulsoup4`
 
-#Features
+## Features
 *   Adds `table table-striped table-hover` to all `<table>` elements.
 *   Adds `img-responsive` to all `<img>` elements.
-*   Use `BOOTSTRAPIFY` in your Pelican configuration file to pass a `{'css-selector': ['list-of-classes']}` dictionary to the plugin. Bootstrapify will append `list-of-classes` to all tags that match `css-selector`. The selector can be as simple as a tag name (`table` or `p`) or as complicated as `a.menu:nth-of-type(3)` (see the [Beautifulsoup4 documentation](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors)).
+*   Use `MATERIALIZE` in your Pelican configuration file to pass a `{'css-selector': ['list-of-classes']}` dictionary to the plugin. Materialize will append `list-of-classes` to all tags that match `css-selector`. The selector can be as simple as a tag name (`table` or `p`) or as complicated as `a.menu:nth-of-type(3)` (see the [Beautifulsoup4 documentation](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors)).
 
-#Example for md tables
+## Example for md tables
 1. Write your table in markdown
 
     ```
@@ -52,6 +52,9 @@ This [pelican](https://github.com/getpelican/pelican) plugin modifies article an
     ```
 
 
-#Known Issues
+## Known Issues
 *   plugin seems not to fire for drafts
 *   not enough customization possible, maybe read article,page metadata for more options
+
+## Credits
+Based on https://github.com/ingwinlu/pelican-bootstrapify
